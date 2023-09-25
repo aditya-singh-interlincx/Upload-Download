@@ -1,6 +1,7 @@
 const fs = require('fs')
 
 exports.upload = (req, res, next) => {
+  req.setTimeout(500000);
   console.log('fileController.upload: started', req.file)
   const file = req.file
   return res.status(200).json({
